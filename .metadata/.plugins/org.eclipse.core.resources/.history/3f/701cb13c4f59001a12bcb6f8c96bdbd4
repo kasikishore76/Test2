@@ -1,0 +1,27 @@
+package log4jpack;
+
+import org.testng.annotations.*;
+
+
+public class Loginpage {
+	
+	static Logger logger;
+	
+	@Test
+	public void setup() {
+		logger=Logger.getLogger("Loginpage");
+		ConfigureProperty.
+		
+	}
+
+	@Test
+	public void login() {
+		
+	}
+	@Test
+	public void logout() {
+		
+	}
+	
+	
+}

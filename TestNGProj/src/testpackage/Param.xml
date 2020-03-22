@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="paramsuite">
+<test name="paramtest">
+<parameter name="a" value="hi parameterization test successful1"></parameter>
+<parameter name="b" value="hi parameterization test successful2"></parameter>
+<classes>
+<class name="testpackage.Firsttestngclass">
+</class>
+</classes>
+
+
+
+
+</test>
+
+
+</suite>

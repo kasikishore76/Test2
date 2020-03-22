@@ -1,0 +1,9 @@
+com\mavenproj\pageobjects\Loginpagepom.class
+com\mavenproj\testcases\TC_AddCustomerTest_003.class
+com\mavenproj\testcases\TC_Logintest_001.class
+com\mavenproj\utilities\Reporting.class
+com\mavenproj\utilities\XLUtils.class
+com\mavenproj\pageobjects\AddcustomerPage.class
+com\mavenproj\pageobjects\Baseclass.class
+com\mavenproj\utilities\ReadConfig.class
+com\mavenproj\testcases\TC_LoginDDT_002.class

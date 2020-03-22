@@ -1,0 +1,25 @@
+package javedemo1pack;
+
+public class Firstclass {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+        /* int a= 5;
+         System.out.println(++a);
+         System.out.println(a);
+         */
+		/*float a=5.0f,b=47.0f,c;
+		c=b%a;
+		System.out.println("the result is percentage "+c+ "it is final result " );
+		*/
+		int f=50;
+		int g=60;
+		System.out.println((g>f)!!(g==f));
+		
+		
+         
+         
+	}
+
+}

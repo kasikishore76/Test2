@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 7, Time elapsed: 6.987 s <<< FAILURE! - in TestSuite
+com.mavenproj.testcases.TC_Logintest_001.setup  Time elapsed: 4.352 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: cannot find Chrome binary
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-F68V0COG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00760C83+1707139]
+	Ordinal0 [0x006C68F1+1075441]
+	Ordinal0 [0x0063DFC9+516041]
+	Ordinal0 [0x005CC70E+50958]
+	Ordinal0 [0x005EBFD7+180183]
+	Ordinal0 [0x005EBDDD+179677]
+	Ordinal0 [0x005E9D4B+171339]
+	Ordinal0 [0x005D1D4A+73034]
+	Ordinal0 [0x005D2DC0+77248]
+	Ordinal0 [0x005D2D59+77145]
+	Ordinal0 [0x006DBB67+1162087]
+	GetHandleVerifier [0x007FA966+508998]
+	GetHandleVerifier [0x007FA6A4+508292]
+	GetHandleVerifier [0x0080F7B7+594583]
+	GetHandleVerifier [0x007FB1D6+511158]
+	Ordinal0 [0x006D402C+1130540]
+	Ordinal0 [0x006DD4CB+1168587]
+	Ordinal0 [0x006DD633+1168947]
+	Ordinal0 [0x006F5B35+1268533]
+	BaseThreadInitThunk [0x76D26359+25]
+	RtlGetAppContainerNamedObjectPath [0x76ED7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x76ED7B44+180]
+
+

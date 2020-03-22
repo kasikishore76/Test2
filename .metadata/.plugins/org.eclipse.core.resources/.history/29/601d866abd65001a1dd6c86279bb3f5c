@@ -1,0 +1,43 @@
+package com.mavenproj.testcases;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.mavenproj.pageobjects.Baseclass;
+import com.mavenproj.pageobjects.Loginpagepom;
+
+public class TC_Logintest_001 extends Baseclass{
+
+
+
+	@Test
+	public void logintest() throws InterruptedException, IOException {
+
+		driver.get(baseurl);
+		logger.info("url is opened");
+		Loginpagepom lp=new Loginpagepom(driver);
+		lp.setUsername(username);
+		lp.setPassword(passwrod);
+		lp.clickSubit();
+		driver.wait(10);
+		//Thread.sleep(10000);
+		if(driver.getTitle().equals("Dashboard / nopCommerce administration")) {
+			Assert.assertTrue(true);
+			lp.clickLogout();
+			logger.info("login succesful");
+		}
+		else
+		{
+			captureScreen(driver, "logintest");
+			Assert.assertTrue(false);
+		}
+	}
+
+
+}

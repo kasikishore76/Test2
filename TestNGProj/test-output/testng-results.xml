@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="22882" started-at="2020-03-11T15:33:46 IST" finished-at="2020-03-11T15:34:09 IST">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="18938" started-at="2020-03-11T15:33:46 IST" finished-at="2020-03-11T15:34:05 IST">
+      <class name="testpackage.Crossbrowsertest">
+        <test-method status="PASS" signature="launch(java.lang.String)[pri:1, instance:testpackage.Crossbrowsertest@6e0e048a]" name="launch" duration-ms="18272" started-at="2020-03-11T15:33:46 IST" finished-at="2020-03-11T15:34:05 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="verifytitle()[pri:2, instance:testpackage.Crossbrowsertest@6e0e048a]" name="verifytitle" duration-ms="4" started-at="2020-03-11T15:34:05 IST" finished-at="2020-03-11T15:34:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytitle -->
+        <test-method status="PASS" signature="registration()[pri:3, instance:testpackage.Crossbrowsertest@6e0e048a]" name="registration" duration-ms="3" started-at="2020-03-11T15:34:05 IST" finished-at="2020-03-11T15:34:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registration -->
+        <test-method status="PASS" signature="closebrowser()[pri:4, instance:testpackage.Crossbrowsertest@6e0e048a]" name="closebrowser" duration-ms="608" started-at="2020-03-11T15:34:05 IST" finished-at="2020-03-11T15:34:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closebrowser -->
+      </class> <!-- testpackage.Crossbrowsertest -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="22882" started-at="2020-03-11T15:33:46 IST" finished-at="2020-03-11T15:34:09 IST">
+      <class name="testpackage.Crossbrowsertest">
+        <test-method status="PASS" signature="launch(java.lang.String)[pri:1, instance:testpackage.Crossbrowsertest@7c29daf3]" name="launch" duration-ms="17673" started-at="2020-03-11T15:33:46 IST" finished-at="2020-03-11T15:34:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method status="PASS" signature="verifytitle()[pri:2, instance:testpackage.Crossbrowsertest@7c29daf3]" name="verifytitle" duration-ms="2" started-at="2020-03-11T15:34:04 IST" finished-at="2020-03-11T15:34:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytitle -->
+        <test-method status="PASS" signature="registration()[pri:3, instance:testpackage.Crossbrowsertest@7c29daf3]" name="registration" duration-ms="2" started-at="2020-03-11T15:34:04 IST" finished-at="2020-03-11T15:34:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registration -->
+        <test-method status="PASS" signature="closebrowser()[pri:4, instance:testpackage.Crossbrowsertest@7c29daf3]" name="closebrowser" duration-ms="5153" started-at="2020-03-11T15:34:04 IST" finished-at="2020-03-11T15:34:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closebrowser -->
+      </class> <!-- testpackage.Crossbrowsertest -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;TestNGProj/src/seleniumgridpack&apos;&#x0D;&#x0A;- Original project: &apos;TestNGProj&apos;&#x0D;&#x0A;- Destination element: &apos;TestNGProj/src/seleniumgridpack&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     pageobjectmodel.Loginpom.java&#x0D;&#x0A;     pageobjectmodel.Registraionpage.java&#x0D;&#x0A;     pageobjectmodel.Registrationpom.java&#x0D;&#x0A;     pageobjectmodel.Loginpage.java" description="Copy compilation units" destination="/src&lt;seleniumgridpack" element1="/src&lt;pageobjectmodel{Loginpom.java" element2="/src&lt;pageobjectmodel{Registraionpage.java" element3="/src&lt;pageobjectmodel{Registrationpom.java" element4="/src&lt;pageobjectmodel{Loginpage.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1583404965560" units="4" version="1.0"/>
+</session>

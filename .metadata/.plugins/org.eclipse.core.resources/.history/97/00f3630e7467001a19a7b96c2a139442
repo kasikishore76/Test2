@@ -1,0 +1,26 @@
+package locatorpack;
+
+
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ListofElements {
+ 
+	public static void main(String[] args) throws InterruptedException {
+    	System.setProperty("webdriver.chrome.driver", "D://New folder//browser drivers//chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.spicejet.com/");
+		List <WebElement> linklist=driver.findElements(By.tagName("a"));
+		for (WebElement webElement : linklist) {
+			System.out.println(webElement.getText());
+			
+		}
+	}
+
+}

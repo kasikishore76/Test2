@@ -1,0 +1,79 @@
+package com.mavenproj.testcases;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.mavenproj.pageobjects.Baseclass;
+import com.mavenproj.pageobjects.Loginpagepom;
+import com.mavenproj.utilities.XLUtils;
+//import com.nopcommerce.pageObjects.LoginPage;
+//import com.nopcommerce.utilities.XLUtils;
+
+public class TC_LoginDDT_002 extends Baseclass
+{
+	
+	@Test(dataProvider="LoginData")
+	public void loginTest(String user, String pwd) throws InterruptedException, IOException {
+		
+		driver.get(baseurl);
+		driver.manage().window().maximize(); 
+		
+		Loginpagepom lp = new Loginpagepom(driver);
+				
+		lp.setUsername(user);
+		logger.info("User provided"); //logger msg
+		
+		lp.setPassword(pwd);
+		logger.info("Password provided");//logger msg
+		
+		lp.clickSubit();
+		logger.info("Login in Clicked");//logger msg
+		
+		Thread.sleep(2000);
+		
+		if (driver.getTitle().equals("Dashboard / nopCommerce administration")) {
+			lp.clickLogout();
+			Assert.assertTrue(true);
+					
+		} else {
+			logger.info("Login Failed");//logger msg
+			String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
+			String testname=timeStamp+"logintest";
+			
+			captureScreen(driver,testname);
+			Assert.assertTrue(false);
+			
+		}
+
+	}
+		
+	
+	@DataProvider(name="LoginData")
+	public String [][] getData() throws IOException
+	{
+		String path=System.getProperty("user.dir")+"/src/test/java/com/mavenproj/testDatat/testdoc.xlsx";
+		
+		int rownum=XLUtils.getRowCount(path, "Sheet1");
+		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
+		
+		String logindata[][]=new String[rownum][colcount];
+		
+		for(int i=1;i<=rownum;i++)
+		{
+			for(int j=0;j<colcount;j++)
+			{
+				logindata[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);
+			}
+		}
+		
+		return logindata;
+		
+	}
+	
+	
+}

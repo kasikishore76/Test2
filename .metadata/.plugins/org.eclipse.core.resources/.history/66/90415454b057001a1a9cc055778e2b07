@@ -1,0 +1,46 @@
+package listenerspack;
+
+import static org.testng.Assert.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
+
+public class Logintest {
+	WebDriver driver;
+	@Test(priority=1)
+	public void login() throws InterruptedException {System.setProperty("webdriver.chrome.driver", "D://New folder//browser drivers//chromedriver.exe");
+	 driver=new ChromeDriver();
+	
+	driver.get("https://www.google.com/");
+	Thread.sleep(3000);
+	
+	Assert.assertTrue(false);
+	
+		
+	}
+	@Test(priority=2, dependsOnMethods={"login"})
+	public void search() {
+		driver.findElement(By.name("q")).sendKeys("youtube");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		Assert.assertTrue(true);
+		
+		
+	}
+	@Test(priority=3)
+	public void close() {
+		driver.quit();
+		Assert.assertTrue(true);
+	}
+	
+	
+	public void screenCapture(ITestResult result) {
+		TakesScreenShot ss=(TakesScreenShot)driver;
+	}
+	
+
+}

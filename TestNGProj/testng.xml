@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test1">
+    <classes>
+      <class name="testpackage.Firsttestngclass"/>
+       <class name="testpackage.Secondtestclass"/>
+       <class name="testpackage.Thirdtestclass"/>
+        <class name="testpackage.Fourthtestclass"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Test2">
+    <classes>
+      <class name="testpackage1.Firsttestngclass"/>
+       <class name="testpackage1.Secondtestclass"/>
+       <class name="testpackage1.Thirdtestclass"/>
+        <class name="testpackage1.Fourthtestclass"/>
+    </classes>
+  </test> <!-- Test -->
+ 
+  
+  
+</suite> <!-- Suite -->

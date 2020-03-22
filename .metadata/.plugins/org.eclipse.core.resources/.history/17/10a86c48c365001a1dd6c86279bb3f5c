@@ -1,0 +1,57 @@
+package com.mavenproj.testcases;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.mavenproj.pageobjects.Baseclass;
+import com.mavenproj.pageobjects.Loginpagepom;
+import com.mavenproj.utilities.XLUtils;
+
+public class TC_LOGINDDT_002 extends Baseclass {
+	
+	@Test(dataProvider="LoginData")
+	public void loginTest(String usr, String pwd) throws IOException, InterruptedException {
+		
+		driver.get(baseurl);
+		logger.info("url is opened");
+		Loginpagepom lp=new Loginpagepom(driver);
+		lp.setUsername(usr);
+		lp.setPassword(pwd);
+		lp.clickSubit();
+		Thread.sleep(10000);
+		if(driver.getTitle().equals("Dashboard / nopCommerce administration")) {
+			Assert.assertTrue(true);
+			lp.clickLogout();
+			logger.info("login succesful");
+		}
+		else
+		{
+			//captureScreen(driver, "logintest");
+			Assert.assertTrue(false);
+		}
+
+		
+		
+	}
+	
+	@DataProvider(name="LoginData")
+	public String [][] getData() throws IOException{
+		String path="C:\\Users\\kishore\\Desktop\\testdoc.xlsx";
+		XLUtils.getRowCount(path, "Sheet1");
+		int rownum=XLUtils.getRowCount(path, "Sheet1");
+		int colcount=XLUtils.getCellCount(path, "Sheet1", 1);
+		String logindata[][]=new String[rownum][colcount];
+		for (int i = 1; i < logindata.length; i++) {
+			
+			for (int j = 0; j < colcount; j++) {
+				logindata[i-1][j]=XLUtils.getCellData(path, "Steet1", i, j);
+				
+			}
+		}
+		return logindata;
+	}
+
+}
